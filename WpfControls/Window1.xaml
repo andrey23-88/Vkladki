@@ -1,0 +1,111 @@
+﻿<Window x:Class="WpfControls.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControls"
+        mc:Ignorable="d"
+        Title="E-Shop" Height="450" Width="800">
+    <Grid>
+        <TabControl x:Name="products">
+            <TabItem x:Name="smartphonesTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">                       
+                        <TextBlock Text="Смартфоны" Margin="3"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ListBox x:Name="phoneList" Margin="5"/>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="tabletsTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">                        
+                        <TextBlock Text="Планшеты" Margin="3"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <ListBox x:Name="tabletsList" Margin="5"/>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="adminTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">                        
+                        <TextBlock Text="Настройки" Margin="3"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <TextBlock Text="Название вкладки: " Margin="10"/>
+                        <TextBox x:Name="tabNameTxt" Margin="10"/>
+                        <!--<TextBlock Text="Источник данных: " Margin="10"/>
+                        <TextBox x:Name="sourceTxt" Margin="10"/>-->
+                        <Button Content="Добавить вкладку" Margin="10" x:Name="addTabBtn" Click="addTabBtn_Click"/>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="dataGridTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="C:\Users\Machenike\Documents\Forms Icons\tablet.png" Width="10" Height="10"/>
+                        <TextBlock Text="Таблица 1" Margin="3"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <DataGrid x:Name="phonesGrid" AutoGenerateColumns="True" ColumnWidth="*" RowBackground="Goldenrod" AlternatingRowBackground="LimeGreen" HorizontalGridLinesBrush="Cornsilk" VerticalGridLinesBrush="DeepPink"/>
+                </TabItem.Content>
+            </TabItem>
+
+            <TabItem x:Name="addSmart">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">                        
+                        <TextBlock Text="Добавить смартфон" Margin="3"/>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <TextBlock Text="Название смартфона: "/>
+                        <TextBox x:Name="smaNameTxt"/>
+                        <TextBlock Text="OC: "/>
+                        <TextBox x:Name="smaOsTxt"/>
+                        <TextBlock Text="Память: "/>
+                        <TextBox x:Name="smaMemTxt"/>
+                        <TextBlock Text="Камера: "/>
+                        <TextBox x:Name="smaCamTxt"/>
+                        <TextBlock Text="Цена: "/>
+                        <TextBox x:Name="smaPriceTxt"/>
+                        <Button Content="Добавить смартфон" Margin="10" x:Name="addSmaBtn"
+                                Click="addSmaBtn_Click"/>                        
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            
+            <TabItem x:Name="addTabl">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">                        
+                        <TextBlock Text="Добавить планшет" Margin="3"/>
+                    </StackPanel>
+                </TabItem.Header>                
+                <TabItem.Content>
+                    <StackPanel>
+                        <TextBlock Text="Название планшета: "/>
+                        <TextBox x:Name="tablNameTxt"/>
+                        <TextBlock Text="OC: "/>
+                        <TextBox x:Name="tablOsTxt"/>
+                        <TextBlock Text="Память: "/>
+                        <TextBox x:Name="tablMemTxt"/>
+                        <TextBlock Text="Диагональ: "/>
+                        <TextBox x:Name="tablScreenTxt"/>
+                        <TextBlock Text="Цена: "/>
+                        <TextBox x:Name="tablPriceTxt"/>
+                        <Button Content="Добавить планшет" Margin="10" x:Name="addTablBtn"
+                                Click="addTablBtn_Click"/>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
